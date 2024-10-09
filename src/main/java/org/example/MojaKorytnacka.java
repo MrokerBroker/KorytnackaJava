@@ -57,5 +57,15 @@ public class MojaKorytnacka extends Turtle {
         this.dot(polomer);
         this.setVisible(false);
     }
+    public void vrtulka (double dlzka){
+        for (int i=0;i<8;i++){
+            this.step(dlzka);
+            this.turn(45);
+            this.step(10);
+            this.center();
+
+
+        }
+    }
 }
 

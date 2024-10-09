@@ -17,7 +17,7 @@ public class Main {
         mk.center();
 
 
-        mk.slniecko(100);
+        mk.vrtulka(100);
 
 
 
