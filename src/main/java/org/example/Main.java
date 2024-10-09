@@ -12,9 +12,12 @@ public class Main {
         MojaKorytnacka mk = new MojaKorytnacka();
         plocha.add(mk);
         plocha.resize(1000,1000);
+        plocha.setBackgroundColor(Color.pink);
 
         mk.center();
-        mk.ciarkaBodkaCiarka(100);
+
+
+        mk.slniecko(100);
 
 
 

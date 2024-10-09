@@ -5,7 +5,7 @@ import sk.upjs.jpaz2.Turtle;
 import java.awt.*;
 
 public class MojaKorytnacka extends Turtle {
-    public void trojuholnik(int dlzka) {
+    public void trojuholnik(double dlzka) {
         this.step(dlzka);
         this.turn(120);
         this.step(dlzka);
@@ -40,5 +40,22 @@ public class MojaKorytnacka extends Turtle {
             this.penDown();
             this.step(dlzka / 2);
         }
+    public void domcek (double dlzka){
+        this.stvorec(dlzka);
+        this.step(dlzka);
+        this.turn(30);
+        this.trojuholnik(dlzka);
     }
+    public void slniecko (double polomer){
+        this.setPenColor(Color.yellow);
+        this.setFillColor(Color.yellow);
+        for (int i=0;i<=36;i++){
+            this.step(2*polomer);
+            this.step(-2*polomer);
+            this.turn(10);
+        }
+        this.dot(polomer);
+        this.setVisible(false);
+    }
+}
 
