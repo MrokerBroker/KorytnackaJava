@@ -11,8 +11,10 @@ public class Main {
         WinPane plocha = new WinPane();
         MojaKorytnacka mk = new MojaKorytnacka();
         plocha.add(mk);
+        plocha.resize(1000,1000);
 
-        mk.stvorec(50);
+        mk.center();
+        mk.ciarkaBodkaCiarka(100);
 
 
 
