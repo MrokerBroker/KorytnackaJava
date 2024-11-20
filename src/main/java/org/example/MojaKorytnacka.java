@@ -209,7 +209,7 @@ public class MojaKorytnacka extends Turtle {
             if (distanceTo(startX, startY) > polomer) {
                 this.step(-2);
             }
-            //JPAZUtilities.delay(1);
+            //JPAZUtilities.delay(1);nn
         }
 
     }

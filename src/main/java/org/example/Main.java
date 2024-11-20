@@ -17,7 +17,7 @@ public class Main {
         mk.center();
         
         mk.nachodnaPochodzkaStvorec(100000,100);
-        //komnetarises
+        //komnetarisesjj
 
 
 
