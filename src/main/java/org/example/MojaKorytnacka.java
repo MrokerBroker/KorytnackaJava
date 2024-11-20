@@ -111,7 +111,7 @@ public class MojaKorytnacka extends Turtle {
             this.step(dlzka);
             this.turn(0.5 * uhol - 180);
             this.turn(120);
-            //komentaris
+            //komentarises
         }
     }
 
