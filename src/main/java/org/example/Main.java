@@ -17,6 +17,7 @@ public class Main {
         mk.center();
         
         mk.navigacnaSipka(50);
+        //komnetaris
 
 
 
