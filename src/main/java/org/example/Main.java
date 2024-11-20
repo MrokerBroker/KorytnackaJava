@@ -11,12 +11,12 @@ public class Main {
         WinPane plocha = new WinPane();
         MojaKorytnacka mk = new MojaKorytnacka();
         plocha.add(mk);
-        plocha.resize(1000,1000);
+        plocha.resize(500,500);
         plocha.setBackgroundColor(Color.pink);
 
         mk.center();
         
-        mk.navigacnaSipka(50);
+        mk.nachodnaPochodzkaStvorec(100000,100);
         //komnetarises
 
 
