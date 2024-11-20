@@ -15,9 +15,9 @@ public class Main {
         plocha.setBackgroundColor(Color.pink);
 
         mk.center();
+        
+        mk.navigacnaSipka(50);
 
-
-        mk.vrtulka(100);
 
 
 
