@@ -415,7 +415,7 @@ public class MojaKorytnacka extends Turtle {
             this.step(vyska + 4);
             this.turn(90);
         }
-
+//jjj
     }
     public void kolumbia(int pocKrokov, double sirka, double vyska) {
         double startX = this.getX();

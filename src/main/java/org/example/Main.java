@@ -18,7 +18,7 @@ public class Main {
 
         mk.kolumbia(1000000000,400,250);
         //mk.nachodnaPochodzkaStvorec(100000,100);
-        //komnetarisesjj
+        //komnetarisesjjnn
 
 
 
