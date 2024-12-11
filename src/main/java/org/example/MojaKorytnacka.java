@@ -213,24 +213,252 @@ public class MojaKorytnacka extends Turtle {
         }
 
     }
-    public void nachodnaPochodzkaStvorec(int pocetKrokov, double strana){
+
+    public void nachodnaPochodzkaStvorec(int pocetKrokov, double strana) {
         double startX = this.getX();
         double startY = this.getY();
         double natocenie = this.getDirection();
         this.setPosition(startX, startY);
         this.setDirection(natocenie);
-        for (int i = 0; i < pocetKrokov; i++){
-            this.turn(Math.random()*360);
+        for (int i = 0; i < pocetKrokov; i++) {
+            this.turn(Math.random() * 360);
             this.step(5);
-            if (this.getX()>startX+strana/2 ||
-            this.getX()<startX-strana/2 ||
-            this.getY()>startY+strana/2 ||
-            this.getY()<startY-strana/2){
+            if (this.getX() > startX + strana / 2 ||
+                    this.getX() < startX - strana / 2 ||
+                    this.getY() > startY + strana / 2 ||
+                    this.getY() < startY - strana / 2) {
                 this.step(-5);
             }
         }
     }
-}
+
+    public void plny_trojuholnik(double strana) {
+        this.setFillColor(Color.red);
+        this.setPenColor(Color.pink);
+        this.openPolygon();
+        for (int i = 0; i < 4; i++) {
+            this.turn(-30);
+            this.step(strana);
+            this.turn(120);
+            this.step(strana);
+            this.turn(120);
+            this.step(strana);
+            this.turn(-120);
+        }
+        this.closePolygon();
+    }
+
+    public void moderneUmenie(int pocBodiek, double sirka, double vyska) {
+        double startX = this.getX();
+        double startY = this.getY();
+        double natocenie = this.getDirection();
+        this.turn(90);
+        for (int i = 0; i < 2; i++) {
+            this.step(sirka);
+            this.turn(90);
+            this.step(vyska);
+            this.turn(90);
+        }
+        for (int i = 0; i < pocBodiek; i++) {
+            double polomer = 2 + Math.random() * 5;
+            double surX = startX + polomer + Math.random() * (sirka - 2 * polomer);
+            double surY = startY + polomer + Math.random() * (vyska - 2 * polomer);
+            if (Math.random() > 0.5) {
+                this.setFillColor(Color.blue);
+            } else {
+                setFillColor(Color.red);
+            }
+            this.setPosition(surX, surY);
+            this.dot(polomer);
+            JPAZUtilities.delay(10);
+        }
+
+    }
+
+    public void jemen(int pocKrokov, double sirka, double vyska) {
+        double startX = this.getX();
+        double startY = this.getY();
+        double natocenie = this.getDirection();
+        for (int i = 0; i < pocKrokov; i++) {
+            if (this.getY() > startY - vyska / 6 || this.getY() < startY + vyska / 6) {
+                this.setPenColor(Color.white);
+            }
+            if (this.getY() < startY - vyska / 6) {
+                this.setPenColor(Color.red);
+            }
+            if (this.getY() > startY + vyska / 6) {
+                this.setPenColor(Color.black);
+            }
+            if (this.getX() > startX + sirka / 2
+                    || this.getX() < startX - sirka / 2
+                    || this.getY() > startY + vyska / 2
+                    || this.getY() < startY - vyska / 2) {
+                this.step(-2);
+            }
+            this.turn(Math.random() * 360);
+            this.step(2);
+
+        }
+        this.setPosition(startX - (sirka / 2) - 2, startY - (vyska / 2) - 2);
+        this.setDirection(natocenie);
+        this.setPenColor(Color.black);
+        this.turn(90);
+        for (int i = 0; i < 2; i++) {
+            this.step(sirka + 4);
+            this.turn(90);
+            this.step(vyska + 4);
+            this.turn(90);
+        }
+
+    }
+    public void laos(int pocKrokov, double sirka, double vyska) {
+        double startX = this.getX();
+        double startY = this.getY();
+        double natocenie = this.getDirection();
+        for (int i = 0; i < pocKrokov; i++) {
+            if (this.distanceTo(startX,startY)<vyska/5) {
+                this.setPenColor(Color.white);
+            }
+            if (this.distanceTo(startX,startY)>vyska/5) {
+                this.setPenColor(Color.blue);
+            }
+            if (this.getY()>startY+vyska/4 ||
+                this.getY()<startY-vyska/4) {
+                this.setPenColor(Color.red);
+            }
+            if (this.getX() > startX + sirka / 2
+                    || this.getX() < startX - sirka / 2
+                    || this.getY() > startY + vyska / 2
+                    || this.getY() < startY - vyska / 2) {
+                this.step(-2);
+            }
+            this.turn(Math.random() * 360);
+            this.step(2);
+
+        }
+        this.setPosition(startX - (sirka / 2) - 2, startY - (vyska / 2) - 2);
+        this.setDirection(natocenie);
+        this.setPenColor(Color.black);
+        this.turn(90);
+        for (int i = 0; i < 2; i++) {
+            this.step(sirka + 4);
+            this.turn(90);
+            this.step(vyska + 4);
+            this.turn(90);
+        }
+
+    }
+    public void japan(int pocKrokov, double sirka, double vyska) {
+        double startX = this.getX();
+        double startY = this.getY();
+        double natocenie = this.getDirection();
+        for (int i = 0; i < pocKrokov; i++) {
+            if (this.distanceTo(startX,startY)<vyska/4) {
+                this.setPenColor(Color.red);
+            }
+            if (this.distanceTo(startX,startY)>vyska/4) {
+                this.setPenColor(Color.white);
+            }
+            if (this.getX() > startX + sirka / 2
+                    || this.getX() < startX - sirka / 2
+                    || this.getY() > startY + vyska / 2
+                    || this.getY() < startY - vyska / 2) {
+                this.step(-2);
+            }
+            this.turn(Math.random() * 360);
+            this.step(2);
+
+        }
+        this.setPosition(startX - (sirka / 2) - 2, startY - (vyska / 2) - 2);
+        this.setDirection(natocenie);
+        this.setPenColor(Color.black);
+        this.turn(90);
+        for (int i = 0; i < 2; i++) {
+            this.step(sirka + 4);
+            this.turn(90);
+            this.step(vyska + 4);
+            this.turn(90);
+        }
+
+    }
+    public void cad(int pocKrokov, double sirka, double vyska) {
+        double startX = this.getX();
+        double startY = this.getY();
+        double natocenie = this.getDirection();
+        for (int i = 0; i < pocKrokov; i++) {
+            if (this.getX()<startX-sirka/6) {
+                this.setPenColor(Color.blue);
+            }
+            else if (this.getX()>startX+sirka/6) {
+                this.setPenColor(Color.red);
+            }
+            else {
+                this.setPenColor(Color.yellow);
+            }
+            if (this.getX() > startX + sirka / 2
+                    || this.getX() < startX - sirka / 2
+                    || this.getY() > startY + vyska / 2
+                    || this.getY() < startY - vyska / 2) {
+                this.step(-2);
+            }
+            this.turn(Math.random() * 360);
+            this.step(2);
+
+        }
+        this.setPosition(startX - (sirka / 2) - 2, startY - (vyska / 2) - 2);
+        this.setDirection(natocenie);
+        this.setPenColor(Color.black);
+        this.turn(90);
+        for (int i = 0; i < 2; i++) {
+            this.step(sirka + 4);
+            this.turn(90);
+            this.step(vyska + 4);
+            this.turn(90);
+        }
+
+    }
+    public void kolumbia(int pocKrokov, double sirka, double vyska) {
+        double startX = this.getX();
+        double startY = this.getY();
+        double natocenie = this.getDirection();
+        for (int i = 0; i < pocKrokov; i++) {
+            if (this.getY()<startY) {
+                this.setPenColor(Color.yellow);
+            }
+             if(this.getY()>startY) {
+                this.setPenColor(Color.blue);
+            }
+            if (this.getY()>startY+vyska/4){
+                this.setPenColor(Color.red);
+            }
+            if (this.getX() > startX + sirka / 2
+                    || this.getX() < startX - sirka / 2
+                    || this.getY() > startY + vyska / 2
+                    || this.getY() < startY - vyska / 2) {
+                this.step(-2);
+            }
+            this.turn(Math.random() * 360);
+            this.step(2);
+
+        }
+        this.setPosition(startX - (sirka / 2) - 2, startY - (vyska / 2) - 2);
+        this.setDirection(natocenie);
+        this.setPenColor(Color.black);
+        this.turn(90);
+        for (int i = 0; i < 2; i++) {
+            this.step(sirka + 4);
+            this.turn(90);
+            this.step(vyska + 4);
+            this.turn(90);
+        }
+
+    }
+
+
+
+    }
+
+
 
 
 

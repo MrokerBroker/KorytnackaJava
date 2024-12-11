@@ -15,8 +15,9 @@ public class Main {
         plocha.setBackgroundColor(Color.pink);
 
         mk.center();
-        
-        mk.nachodnaPochodzkaStvorec(100000,100);
+
+        mk.kolumbia(1000000000,400,250);
+        //mk.nachodnaPochodzkaStvorec(100000,100);
         //komnetarisesjj
 
 
