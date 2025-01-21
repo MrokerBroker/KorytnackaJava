@@ -453,6 +453,216 @@ public class MojaKorytnacka extends Turtle {
         }
 
     }
+    public void kostarika(int pocKrokov, double sirka, double vyska){
+        double startX=this.getX();
+        double startY=this.getY();
+        double natocenie=this.getDirection();
+        for(int i=0;i<pocKrokov;i++){
+            if (this.getY()<startY+vyska/6
+                    || this.getY()>startY-vyska/6) {
+                this.setPenColor(Color.red);
+            }
+            if (this.getY()>startY+vyska/6
+                || this.getY()<startY-vyska/6) {
+                this.setPenColor(Color.white);
+            }
+
+            if (this.getY()>startY+vyska/3
+                    || this.getY()<startY-vyska/3) {
+                this.setPenColor(Color.blue);
+            }
+
+            if (this.getX() > startX + sirka / 2
+                    || this.getX() < startX - sirka / 2
+                    || this.getY() > startY + vyska / 2
+                    || this.getY() < startY - vyska / 2) {
+                this.step(-2);
+            }
+
+
+            this.setDirection(Math.random()*360);
+            this.step(2);
+
+        }
+
+    }
+    public void benin(int pocKrokov, double sirka, double vyska){
+        double startX=this.getX();
+        double startY=this.getY();
+        double natocenie=this.getDirection();
+        for(int i=0;i<pocKrokov;i++){
+            if(this.getX()<startX-sirka/4){
+                this.setPenColor(Color.green);
+            }
+            if(this.getX()>startX-sirka/4){
+                this.setPenColor(Color.yellow);
+            }
+            if(this.getX()>startX-sirka/4
+                && this.getY()>startY){
+                this.setPenColor(Color.red);
+            }
+
+
+            if (this.getX() > startX + sirka / 2
+                    || this.getX() < startX - sirka / 2
+                    || this.getY() > startY + vyska / 2
+                    || this.getY() < startY - vyska / 2) {
+                this.step(-2);
+            }
+
+
+            this.setDirection(Math.random()*360);
+            this.step(2);
+
+        }
+
+    }
+    public void gambia(int pocKrokov, double sirka, double vyska){
+        double startX=this.getX();
+        double startY=this.getY();
+        double natocenie=this.getDirection();
+        for(int i=0;i<pocKrokov;i++){
+            if (this.getY()>startY-vyska/8
+                    || this.getY()<startY+vyska/8){
+                this.setPenColor(Color.blue);
+            }
+            if((this.getY()<startY-vyska/8
+                && this.getY()>startY-3*vyska/16) || (this.getY()<startY+3*vyska/16 &&
+                    this.getY()>startY+vyska/8)){
+                this.setPenColor(Color.white);
+            }
+            if(this.getY()>startY+3*vyska/16){
+                this.setPenColor(Color.green);
+            }
+            if(this.getY()<startY-3*vyska/16){
+                this.setPenColor(Color.red);
+            }
+
+
+            if (this.getX() > startX + sirka / 2
+                    || this.getX() < startX - sirka / 2
+                    || this.getY() > startY + vyska / 2
+                    || this.getY() < startY - vyska / 2) {
+                this.step(-2);
+            }
+
+
+            this.setDirection(Math.random()*360);
+            this.step(2);
+
+        }
+
+    }
+    public void nigger(int pocKrokov, double sirka, double vyska){
+        double startX=this.getX();
+        double startY=this.getY();
+        double natocenie=this.getDirection();
+        for(int i=0;i<pocKrokov;i++){
+            if(this.getY()>startY-vyska/6 ||
+                this.getY()<startY+vyska/6){
+                this.setPenColor(Color.white);
+            }
+            if(this.getY()>startY+vyska/6){
+                this.setPenColor(Color.green);
+            }
+            if(this.getY()<startY-vyska/6){
+                this.setPenColor(Color.orange);
+            }
+            if(distanceTo(startX,startY)<vyska/8){
+                this.setPenColor(Color.orange);
+            }
+
+            if (this.getX() > startX + sirka / 2
+                    || this.getX() < startX - sirka / 2
+                    || this.getY() > startY + vyska / 2
+                    || this.getY() < startY - vyska / 2) {
+                this.step(-2);
+            }
+
+
+            this.setDirection(Math.random()*360);
+            this.step(2);
+
+        }
+
+    }
+    public void maurious(int pocKrokov, double sirka, double vyska){
+        double startX=this.getX();
+        double startY=this.getY();
+        double natocenie=this.getDirection();
+        for(int i=0;i<pocKrokov;i++){
+            if(this.getY()>startY){
+                this.setPenColor(Color.yellow);
+            }
+            if(this.getY()<startY){
+                this.setPenColor(Color.blue);
+            }
+            if(this.getY()<startY-vyska/4){
+                this.setPenColor(Color.red);
+            }
+            if(this.getY()>startY+vyska/4){
+                this.setPenColor(Color.green);
+            }
+            if (this.getX() > startX + sirka / 2
+                    || this.getX() < startX - sirka / 2
+                    || this.getY() > startY + vyska / 2
+                    || this.getY() < startY - vyska / 2) {
+                this.step(-2);
+            }
+
+
+            this.setDirection(Math.random()*360);
+            this.step(2);
+
+        }
+
+    }
+    public void texas(int pocKrokov, double sirka, double vyska){
+        double startX=this.getX();
+        double startY=this.getY();
+        double natocenie=this.getDirection();
+        for(int i=0;i<pocKrokov;i++){
+
+            if(this.getY()<startY){
+                this.setPenColor(Color.white);
+            }
+            if(this.getY()>startY){
+                this.setPenColor(Color.red);
+            }
+            if(this.getX()<startX-sirka/6){
+                this.setPenColor(Color.blue);
+            }
+            if (this.getX() > startX + sirka / 2
+                    || this.getX() < startX - sirka / 2
+                    || this.getY() > startY + vyska / 2
+                    || this.getY() < startY - vyska / 2) {
+                this.step(-2);
+            }
+
+
+            this.setDirection(Math.random()*360);
+            this.step(2);
+
+        }
+        this.penUp();
+        this.setDirection(90);
+        this.moveTo(startX-sirka/2 +sirka/12,startY-15);
+        this.pathviezdica(80);
+
+
+    }
+    public void pathviezdica(double strana){
+        this.setFillColor(Color.white);
+        this.openPolygon();
+        for(int i=0;i<5;i++){
+              this.step(strana);
+              this.turn(144);
+        }
+        this.closePolygon();
+    }
+
+
+
 
 
 

@@ -16,7 +16,7 @@ public class Main {
 
         mk.center();
 
-        mk.kolumbia(1000000000,400,250);
+        mk.texas(1000000,400,250);
         //mk.nachodnaPochodzkaStvorec(100000,100);
         //komnetarisesjjnn
 
